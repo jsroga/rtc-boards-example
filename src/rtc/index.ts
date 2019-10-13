@@ -1,6 +1,6 @@
 import { Connection, Op } from '@soundation/sharedb/lib/client'
 import { handleOps } from './processor'
-import { ICollabDocument } from '../interfaces/collab/document'
+import { IState } from '../store/types/state';
 
 class FakeSocket {
   get readyState() {
@@ -9,7 +9,7 @@ class FakeSocket {
     }
     return 0
   }
-
+  //@ts-ignore
   public onmessage: (msg: any) => any
   private didInit = false
   public static create() {
@@ -78,7 +78,7 @@ export const pushOps = (ops: Op[], undoable = true) => {
   })
 }
 
-export const createDoc = (content: ICollabDocument): void => {
+export const createDoc = (content: IState): void => {
   try {
     // @ts-ignore
     doc.del()

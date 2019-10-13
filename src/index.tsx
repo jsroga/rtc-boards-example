@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './collab'
+import './rtc/'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { createDoc } from './rtc/index';
+import { initialState } from './store/index';
+
+createDoc(initialState)
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

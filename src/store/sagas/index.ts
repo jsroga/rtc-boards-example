@@ -1,9 +1,9 @@
 import { all, call, spawn } from 'redux-saga/effects'
-
+import lists from './lists'
 
 export default function* rootSaga() {
   const sagas: any = [
-   
+    ...lists
   ]
 
   yield all(
