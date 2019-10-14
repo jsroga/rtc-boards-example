@@ -5,7 +5,7 @@ import store from '../store/index'
 import { addCardConfirmed } from '../store/actions/cards'
 import { addListConfirmed } from '../store/actions/lists'
 
-const socket = new WebSocket('ws://rtc-example-board-server-sigma.herokuapp.com/')
+const socket = new WebSocket('wss://rtc-example-board-server-sigma.herokuapp.com/')
 const connection = new ShareDB.Connection(socket)
 
 const doc = connection.get('project', '0')
