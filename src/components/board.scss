@@ -3,5 +3,14 @@
     display: flex;
     flex-grow: 1;
     flex-shrink: 0;
+    overflow: scroll;
+  }
+
+  &-actions {
+    padding: 10px;
+
+    .button {
+      margin-right: 20px;
+    }
   }
 }

@@ -1,10 +1,10 @@
 import { all, call, spawn } from 'redux-saga/effects'
 import lists from './lists'
+import cards from './cards'
+import workspace from './workspace'
 
 export default function* rootSaga() {
-  const sagas: any = [
-    ...lists
-  ]
+  const sagas: any = [...lists, ...cards, ...workspace]
 
   yield all(
     sagas.map((saga: any) => {

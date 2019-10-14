@@ -1,7 +1,38 @@
 .rtc-list {
-  min-width: 250px;
-  min-height: 200px;
-  background-color: grey;
+  min-width: 350px;
+  min-height: 400px;
   padding: 20px; 
   margin: 10px;
+  background-color: #e7e7e7;
+
+  &-input-container {
+    width: 100%;
+  }
+
+  &-droppable {
+    min-height: 80px;
+    margin-bottom: 10px;
+    background-color: #e7e7e7;
+    transition: background-color 300ms;
+    &.dashed {
+      border: 1px dashed #b2b2b2;
+      background-color: #f3f3f3;
+    }
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: italic;
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  &-id {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

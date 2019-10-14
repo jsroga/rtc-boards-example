@@ -1,25 +1,13 @@
-import { ICardsState } from '../reducers/cards';
-import actionTypes, {
-  IAddListAction,
-  IRemoveListAction,
-  IChangeListOrderAction
-} from '../types/lists'
+import { ICardsState } from '../reducers/cards'
+import actionTypes, { IAddListAction, IRemoveListAction, IChangeListOrderAction } from '../types/lists'
 
 // BPM
-export const addListRequested = (list: {
-  id: string,
-  order: number,
-  cards?: ICardsState
-}): IAddListAction => ({
+export const addListRequested = (list: { id: string; order: number; cards?: ICardsState }): IAddListAction => ({
   type: actionTypes.ADD_LIST_REQUESTED,
   payload: list
 })
 
-export const addListConfirmed = (list: {
-  id: string,
-  order: number,
-  cards?: ICardsState
-}): IAddListAction => ({
+export const addListConfirmed = (list: { id: string; order: number; cards?: ICardsState }): IAddListAction => ({
   type: actionTypes.ADD_LIST_CONFIRMED,
   payload: list
 })

@@ -3,31 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@soundation/sharedb": "^3.2.1",
-    "@types/jest": "24.0.18",
-    "@types/lodash": "^4.14.144",
-    "@types/node": "12.7.12",
-    "@types/react": "16.9.5",
-    "@types/react-beautiful-dnd": "^11.0.3",
-    "@types/react-dom": "16.9.1",
-    "@types/react-redux": "^7.1.4",
+    "bulma": "^0.7.5",
     "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
     "react": "^16.10.2",
     "react-beautiful-dnd": "^11.0.5",
     "react-dom": "^16.10.2",
+    "react-icons": "^3.7.0",
     "react-redux": "^7.1.1",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "redux-saga": "^1.1.1",
-    "typescript": "3.6.4",
     "uuid": "^3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tslint": "tslint -c tslint.json -p tsconfig.json 'src/**/*.ts?(x)'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,6 +39,22 @@
     ]
   },
   "devDependencies": {
-    "@types/uuid": "^3.4.5"
+    "@soundation/sharedb": "^3.2.1",
+    "@types/jest": "24.0.18",
+    "@types/lodash": "^4.14.144",
+    "@types/node": "12.7.12",
+    "@types/react": "16.9.5",
+    "@types/react-beautiful-dnd": "^11.0.3",
+    "@types/react-dom": "16.9.1",
+    "@types/react-redux": "^7.1.4",
+    "@types/uuid": "^3.4.5",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^7.0.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.5.1",
+    "typescript": "3.6.4"
   }
 }

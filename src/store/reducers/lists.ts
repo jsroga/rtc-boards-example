@@ -1,12 +1,12 @@
-import actionTypes from '../types/lists';
+import actionTypes from '../types/lists'
 
 export interface IListState {
-  id: string,
-  order: number,
+  id: string
+  order: number
 }
 
 export interface IListsState {
-  [id: string] : IListState
+  [id: string]: IListState
 }
 
 export default (state: IListsState | undefined, action: any): IListsState => {
@@ -23,16 +23,18 @@ export default (state: IListsState | undefined, action: any): IListsState => {
         [payload.id]: payload
       }
     case actionTypes.REMOVE_LIST_CONFIRMED:
-      const newState = {...state}
+      const newState = { ...state }
       delete newState[payload.id]
       return newState
     case actionTypes.CHANGE_LIST_ORDER_CONFIRMED:
       return {
         ...state,
-        ...{[payload.id]: {
-          ...state[payload.id],
-          order: payload.order
-        }}
+        ...{
+          [payload.id]: {
+            ...state[payload.id],
+            order: payload.order
+          }
+        }
       }
     default:
       return state
