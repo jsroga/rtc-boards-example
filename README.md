@@ -1,3 +1,5 @@
+![rtc example](https://rtc-boards-example.herokuapp.com/example.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
